@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTTIZO | POP UP FORM</title>
+    <link rel="stylesheet" href="CSS/output.css"/>
+</head>
+<body>
+    <div class="w-full h-screen flex items-center justify-center bg-gray-100">
+        <div class="border border-gray-300 rounded-lg lg:w-[40vw] w-full flex flex-col lg:flex-row m-4" >
+            <div class="lg:w-[54%] border border-gray-300 overflow-hidden rounded-tl-lg rounded-tr-lg lg:rounded-none lg:rounded-l-lg h-[30vh] lg:h-[60vh] popUpImage-wrapper">
+                <img src="assets/i1.webp" alt="" class="w-full h-full object-cover rounded-tl-lg rounded-tr-lg lg:rounded-none lg:rounded-l-lg">
+            </div>
+            <div class="lg:w-[46%] flex flex-col p-5 justify-center">
+                <h1 class="text-3xl font-bold text-blue-800">Contact Us</h1>
+                <p class="text-sm mb-4 mt-2 text-gray-500">If you have any questions, feel free to reach out!</p>
+                <form action="">
+                    <div class="mb-3">
+                        <input type="text" placeholder="Enter your name" class="w-full px-3 py-2 border border-gray-200 outline-none text-xs text-gray-400">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" placeholder="Enter your phone number" class="w-full px-3 py-2 border border-gray-200 outline-none text-xs text-gray-400">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" placeholder="Enter your email" class="w-full px-3 py-2 border border-gray-200 outline-none text-xs text-gray-400">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea placeholder="Enter your message" class="w-full px-3 py-2 border border-gray-200 outline-none text-xs text-gray-400" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-xs font-bold text-white text-center px-3 py-2 w-full">Submit</button>
+                </form>
+
+            </div>
+            <div class="relative right-0 top-0 z-10">
+                <button class="absolute top-2 right-2 bg-gray-200 text-gray-500 rounded-full p-2 hover:bg-gray-300 focus:outline-none" onclick="window.close()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+text-colors used-
+text-white
+text-gray-400
+text-gray-500
+text-blue-800
+
+background color used-
+bg-blue-500
+
+padding and margin used for semantics-
+w-full h-fit pt-20 pb-10 lg:px-8 xl:px-32
+
+
+tailwindcss command line to watch--
+npx @tailwindcss/cli -i ./src/input.css -o ./dist/CSS/output.css --watch 
+
+
+
+cdn links for head-
+<link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />

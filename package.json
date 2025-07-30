@@ -1,0 +1,16 @@
+{
+  "name": "inttizo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/CSS/output.css --minify"
+  },
+  "keywords": [],
+  "author": "Manji Mehta",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}
