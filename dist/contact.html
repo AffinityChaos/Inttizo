@@ -4,16 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INTTIZO | Contact Us</title>
-    <link rel="stylesheet" href="CSS/output.css">
-    <!-- cdn -->
+    <link rel="stylesheet" href="CSS/output.css" />
+    <link rel="stylesheet" href="CSS/custom.css">
+    <!-- cdn for swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- header -->
+    <header id="header" class='w-full  absolute top-0 left-0 z-100 bg-black/90 lg:bg-transparent'>
+        <div class="header-wrapper flex flex-row justify-between items-center h-16 lg:h-16 xl:h-20 px-4 lg:px-16 xl:px-24">
+            <div class="logo">
+                <img src="assets/logo.png" alt="" class="h-12 lg:h-8 xl:h-12 object-cover" />
+            </div>
+            
+            <button class="lg:hidden menu-button text-xl text-gray-200 hover:text-gray-50 transition-all duration-200 " onclick="document.getElementById('navbar').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="navbar" class="absolute hidden top-0 left-0 bg-black/98 h-[calc(100vh-1rem)] lg:h-fit lg:bg-transparent w-full lg:w-fit lg:static lg:block p-4 lg:p-0">
+                <div class="lg:hidden mb-8 flex justify-between items-center">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="" class="h-16 object-cover" />
+                    </div>
+                    <div class="lg:hidden relative top-2 right-2 ">
+                            <button class="flex items-center justify-center text-white hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i class="fa-solid fa-xmark" onclick="document.getElementById('navbar').classList.toggle('hidden')"></i></button>
+                        </div>
+                </div>
+                
+                <ul class='flex flex-col lg:flex-row lg:justify-center lg:items-center lg:gap-x-8'>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="index.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all ">Home</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="about.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">About Us</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="services.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Services</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="gallery.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Gallery</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="blog.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Blog</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="contact.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Contact Us</a></li>
+                </ul>
+                <div class="flex lg:hidden gap-3 mt-4">
+                    <a href="https://www.facebook.com/INTTIZO" target="_blank"
+                        class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                            class="fa-brands fa-facebook-f xl:text-lg"></i></a>
+                    <a href="https://www.instagram.com/inttizo/" target="_blank"
+                        class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                            class="fa-brands fa-instagram xl:text-lg"></i></a>
+                    <a href="https://www.linkedin.com/company/inttizo/" target="_blank"
+                        class="flex items-center justify-center text-white bg-blue-500 hover:bg-white hover:text-yellow-700 transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                            class="fa-brands fa-linkedin-in xl:text-lg"></i></a>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
     <!-- page title -->
     <div class="relative w-full h-[80vh] lg:h-[100vh] parallax flex flex-col justify-center items-center" style="background-image:url('assets/i2.webp')">
-        <div class="w-fit h-fit flex flex-col justify-center items-center">
+        <div class=" flex flex-col justify-center items-center w-full h-full bg-black/60">
             <h1 class="text-4xl font-bold text-white uppercase">CONTACT US</h1>
             <p class="py-4 text-gray-200 flex gap-x-1 align-middle items-center text-xs font-semibold"><span><i class="fa-regular fa-house"></i>Home</span><span class="tracking-wider">//</span>Contact Us</p>
         </div>
@@ -21,81 +67,271 @@
     <!-- contact us -->
     <div class="w-full py-20 lg:px-16 xl:px-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 bg-white rounded-xs">
-            <div class='lg:col-span-5 relative mb-10'>
-                <div class="lg:absolute inset-0 bg-gray-100 rounded-r-xs overflow-hidden w-[110%] ">
-                    <img src="assets/i1.webp" alt="" class="w-full h-full object-cover rounded-r-xs">
+            <div class="lg:col-span-5 relative mb-10">
+                <div class="lg:absolute inset-0 bg-gray-100 rounded-r-xs overflow-hidden w-[110%]">
+                    <img src="assets/i1.webp" alt="" class="w-full h-full object-cover rounded-r-xs" />
                 </div>
             </div>
-            <div class="lg:p-8 lg:col-span-7 mb-10 shadow-sm">
-                <h2 class="text-3xl lg:text-3xl xl:text-4xl font-bold text-gray-800 text-center mb-12">Get In Touch</h2>
-                <form action="" class="p-6 lg:pl-20">
-                    <div class="my-3 p-0.8">
-                        <label for="name" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Full Name</label>
+            <div class="lg:p-8 lg:col-span-7 shadow-sm mb-10">
+                <h2 class="text-3xl lg:text-3xl xl:text-4xl font-bold text-gray-800 text-center mb-6">
+                    Get In Touch
+                </h2>
+                <form action="" class="p-6 py-4 lg:pl-20">
+                    <div class="my-1 p-0.8">
+                        <label for="name" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Full
+                            Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name"
-                            class="w-full p-3  rounded-md border-b border-gray-300 text-sm outline-none text-gray-400">
+                            class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4">
-                        <div class="my-3 p-0.8">
-                            <label for="email" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Email Address</label>
+                        <div class="my-1 p-0.8">
+                            <label for="email"
+                                class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Email
+                                Address</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email"
-                                class="w-full p-3  rounded-md border-b border-gray-300 text-sm outline-none text-gray-400">
+                                class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
                         </div>
-                        <div class="my-3 p-0.8">
-                            <label for="phone" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Phone Number</label>
+                        <div class="my-1 p-0.8">
+                            <label for="phone"
+                                class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Phone
+                                Number</label>
                             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
-                                class="w-full p-3  rounded-md border-b border-gray-300 text-sm outline-none text-gray-400">
+                                class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
                         </div>
                     </div>
-                    <div class="my-3 p-0.8">
-                        <label for="subject" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Subject</label>
+                    <div class="my-1 p-0.8">
+                        <label for="subject"
+                            class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Subject</label>
                         <input type="text" id="subject" name="subject" placeholder="Enter the subject"
-                            class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400">
+                            class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
                     </div>
-                    <div class="my-3 p-0.8">
-                        <label for="message" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Message</label>
+                    <div class="my-1 p-0.8">
+                        <label for="message"
+                            class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Message</label>
                         <textarea id="message" name="message" rows="4" placeholder="Enter your message"
                             class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-2.5 mt-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700">Send Message</button>
+                    <button type="submit"
+                        class="w-full py-2.5 mt-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700">
+                        Send Message
+                    </button>
                 </form>
             </div>
-            
         </div>
         <!-- contact info -->
         <div class="grid grid-cols-2 lg:grid-cols-4 mt-10 gap-4">
             <div class="p-3 shadow-xs">
                 <div class="flex flex-col p-4 align-center text-center">
-                    <div class="flex justify-center items-center w-10 h-10 lg:w-20 lg:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
-                        <img src="assets/icon/location.png" alt="" class="w-full h-full object-cover rounded-full">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/location.png" alt="" class="w-full h-full object-cover rounded-full" />
                     </div>
-                    <address class="inline text-base text-gray-500"> <span class="text-lg font-semibold text-gray-600">Address: </span>1234 Street Name, City, State, 12345</address>
+                    <address class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Address: </span>1234 Street Name, City, State,
+                        12345
+                    </address>
                 </div>
             </div>
             <div class="p-3 shadow-xs">
                 <div class="flex flex-col p-4 align-center text-center">
-                    <div class="flex justify-center items-center w-10 h-10 lg:w-20 lg:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
-                        <img src="assets/icon/envelop.png" alt="" class="w-full h-full object-cover rounded-full">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/envelop.png" alt="" class="w-full h-full object-cover rounded-full" />
                     </div>
-                    <p class="inline text-base text-gray-500"><span class="text-lg font-semibold text-gray-600">Email: </span><a href="mailto:info@example.com">info@example.com</a></p>
+                    <p class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Email: </span><a
+                            href="mailto:info@example.com">info@example.com</a>
+                    </p>
                 </div>
             </div>
             <div class="p-3 shadow-xs">
                 <div class="flex flex-col p-4 align-center text-center">
-                    <div class="flex justify-center items-center w-10 h-10 lg:w-20 lg:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
-                        <img src="assets/icon/call.png" alt="" class="w-full h-full object-cover rounded-full">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/call.png" alt="" class="w-full h-full object-cover rounded-full" />
                     </div>
-                    <p class="inline text-base text-gray-500"><span class="text-lg font-semibold text-gray-600">Phone: </span><a href="tel:11000110011"> +91-1100-011-011</a></p>
+                    <p class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Phone: </span><a href="tel:11000110011">
+                            +91-1100-011-011</a>
+                    </p>
                 </div>
             </div>
             <div class="p-3 shadow-xs">
                 <div class="flex flex-col p-4 align-center text-center">
-                    <div class="flex justify-center items-center w-10 h-10 lg:w-20 lg:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
-                        <img src="assets/icon/internet.png" alt="" class="w-full h-full object-cover rounded-full">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/internet.png" alt="" class="w-full h-full object-cover rounded-full" />
                     </div>
-                    <p class="inline text-base text-gray-500"><span class="text-lg font-semibold text-gray-600">Website: </span><a href="https://inttizo.com/">inttizo.com</a></p>
+                    <p class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Website: </span><a
+                            href="https://inttizo.com/">inttizo.com</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+    <!-- footer -->
+    <div class="w-full bg-black/90 pt-20 px-2 lg:px-16 xl:px-28">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 border border-gray-300 bg-white p-8 lg:p-6 xl:p-8 text-gray-300">
+            <div class="grid grid-cols-12 p-2 box-border">
+                <div class="col-span-3">
+                    <div class="w-16 h-16 xl:w-20 xl:h-20">
+                        <img src="assets/icon/call.png" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="col-span-9 flex flex-col justify-center pl-4">
+                    <span class="uppercase text-gray-800 font-bold text-lg mb-2 lg:mb-1 xl:mb-2">Call Us</span>
+                    <a href="tel:1100110011"
+                        class="text-gray-400 text-sm lg:text-xs xl:text-sm font-semibold hover:text-yellow-700 transition-all duration-200">+91-1100-011-011</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-2">
+                <div class="col-span-3">
+                    <div class="w-16 h-16 xl:w-20 xl:h-20">
+                        <img src="assets/icon/location.png" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="col-span-9 flex flex-col justify-center pl-4">
+                    <span class="uppercase text-gray-800 font-bold text-lg mb-2 lg:mb-1 xl:mb-2">Address</span>
+                    <address
+                        class="text-gray-400 text-sm lg:text-xs xl:text-sm font-semibold hover:text-yellow-700 transition-all duration-200">
+                        1234 Street Name, City, State, 12345
+                    </address>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-2">
+                <div class="col-span-3">
+                    <div class="w-16 h-16 xl:w-20 xl:h-20">
+                        <img src="assets/icon/envelop.png" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="col-span-9 flex flex-col justify-center pl-4">
+                    <span class="uppercase text-gray-800 font-bold text-lg mb-2 lg:mb-1 xl:mb-2">Write To us</span>
+                    <a href="mailto:info@inttizo.com"
+                        class="text-gray-400 text-sm lg:text-xs xl:text-sm font-semibold hover:text-yellow-700 transition-all duration-200">info@inttizo.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="py-8 grid grid-cols-1 lg:grid-cols-12">
+            <div class=" col-span-4">
+                <div class="p-2 lg:pr-4">
+                    <div class="logo h-24 lg:h-16 xl:h-24 flex">
+                        <img src="assets/logo.png" alt="" class="h-full object-cover" />
+                    </div>
+                    <p class="text-sm xl:text-base text-gray-400 lg:my-4 xl:my-6 font-semibold">
+                        INTTIZO is a design-first studio crafting refined spaces through
+                        thoughtful interiors, functional architecture, and curated
+                        materials — where form meets purpose with timeless appeal.
+                    </p>
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/INTTIZO" target="_blank"
+                            class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-brands fa-facebook-f xl:text-lg"></i></a>
+                        <a href="https://www.instagram.com/inttizo/" target="_blank"
+                            class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-brands fa-instagram xl:text-lg"></i></a>
+                        <a href="https://www.linkedin.com/company/inttizo/" target="_blank"
+                            class="flex items-center justify-center text-white bg-blue-500 hover:bg-white hover:text-yellow-700 transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-brands fa-linkedin-in xl:text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="p-2 lg:p-4">
+                        <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
+                            Quick Links
+                        </h3>
+                        <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                        <ul class="space-y-1 lg:mx-2">
+                            <li>
+                                <a href="index.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">About
+                                    Us</a>
+                            </li>
+
+                            <li>
+                                <a href="gallery.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="blog.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Blog</a>
+                            </li>
+                            <li>
+                                <a href="contact.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Contact
+                                    Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="p-2 lg:p-4">
+                            <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
+                                Our Services
+                            </h3>
+                            <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                            <ul class="space-y-1 lg:px-2">
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
+                                        Kitchen</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
+                                        Wardrobe</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bedroom</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Living Room</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bathroom Vanities</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Office Furniture</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-2 lg:p-4">
+                            <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
+                                Kitchen Design
+                            </h3>
+                            <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                            <ul class="space-y-1 lg:mx-2">
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Island Shape</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">L-Shape</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Parallel</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Straight</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">U-Shape</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">G-Shape</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm lg:text-xs xl:text-sm py-4 border-t border-gray-200">
+            <p>
+                &copy; 2025 INTTIZO. All rights reserved.
+                <a href="https://rantechnology.in/" target="_blank"
+                    class="hover:text-gray-200 transition-all duration-200">
+                    Designed and Powered by Rantechnology</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
