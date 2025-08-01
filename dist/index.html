@@ -1,31 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INTTIZO | COMMING SOON</title>
-    <link rel="stylesheet" href="CSS/output.css"/>
+    <link rel="stylesheet" href="CSS/output.css" />
+    <link rel="stylesheet" href="CSS/custom.css">
+    <!-- cdn for swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+    <!-- header -->
+    <header id="header" class='w-full  absolute top-0 left-0 z-100 bg-black/90 lg:bg-transparent'>
+        <div class="header-wrapper flex flex-row justify-between items-center h-16 lg:h-16 xl:h-20 px-4 lg:px-16 xl:px-24">
+            <div class="logo">
+                <img src="assets/logo.png" alt="" class="h-12 lg:h-8 xl:h-12 object-cover" />
+            </div>
+            
+            <button class="lg:hidden menu-button text-xl text-gray-200 hover:text-gray-50 transition-all duration-200 " onclick="document.getElementById('navbar').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
 
+            <nav id="navbar" class="absolute hidden top-0 left-0 bg-black/98 h-[calc(100vh-1rem)] lg:h-fit lg:bg-transparent w-full lg:w-fit lg:static lg:block p-4 lg:p-0">
+                <div class="lg:hidden mb-8 flex justify-between items-center">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="" class="h-16 object-cover" />
+                    </div>
+                    <div class="lg:hidden relative top-2 right-2 ">
+                            <button class="flex items-center justify-center text-white hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i class="fa-solid fa-xmark" onclick="document.getElementById('navbar').classList.toggle('hidden')"></i></button>
+                        </div>
+                </div>
+                
+                <ul class='flex flex-col lg:flex-row lg:justify-center lg:items-center lg:gap-x-8'>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="index.html" class="nav-link text-lg lg:text-base font-semibold text-gray-400 hover:text-gray-100 transition-all ">Home</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="about.html" class="nav-link text-lg lg:text-base font-semibold text-gray-400 hover:text-gray-100 transition-all">About Us</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="services.html" class="nav-link text-lg lg:text-base font-semibold text-gray-400 hover:text-gray-100 transition-all">Services</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="portfolio.html" class="nav-link text-lg lg:text-base font-semibold text-gray-400 hover:text-gray-100 transition-all">Portfolio</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="contact.html" class="nav-link text-lg lg:text-base font-semibold text-gray-400 hover:text-gray-100 transition-all">Contact Us</a></li>
+                </ul>
+                <div class="flex lg:hidden gap-3 mt-4">
+                    <a href="https://www.facebook.com/INTTIZO" target="_blank"
+                        class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                            class="fa-brands fa-facebook-f xl:text-lg"></i></a>
+                    <a href="https://www.instagram.com/inttizo/" target="_blank"
+                        class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                            class="fa-brands fa-instagram xl:text-lg"></i></a>
+                    <a href="https://www.linkedin.com/company/inttizo/" target="_blank"
+                        class="flex items-center justify-center text-white bg-blue-500 hover:bg-white hover:text-yellow-700 transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                            class="fa-brands fa-linkedin-in xl:text-lg"></i></a>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
     
-
-
-
-
-
-    <!-- <main>
-        <div class="image-container">
-            <img src="assets/i2.webp" alt="Coming Soon">
+    <!-- Hero Section -->
+    <div class="w-full h-[90vh] lg:h-[100vh] bg-black/90">
+        <!-- Slider main container -->
+        <div class="swiper heroSwiper w-full h-full">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper w-full h-full">
+                <!-- Slides -->
+                <div class="swiper-slide bg-right-bottom h-full"
+                    style="background-image: url('assets/i1.webp')">
+                    <div
+                        class="flex flex-col items-center h-full justify-center px-4 lg:px-56 xl:px-68 text-center bg-black/60">
+                        <h2 class="text-xl lg:text-4xl xl:text-5xl text-white tracking-widest mb-6 lg:mb-8 font-bold">
+                            Design Beyond Aesthetics
+                        </h2>
+                        <p class="text-sm lg:text-xl xl:text-2xl font-semibold text-gray-200 mb-8 tracking-wider">
+                            At INTTIZO, we blend purposeful functionality with refined
+                            elegance — curating interiors that not only look stunning but
+                            deeply align with your personal or brand identity.
+                        </p>
+                        <a href=""
+                            class="border border-gray-200 text-white text-xs lg:text-sm font-semibold xl:text-base py-2.5 px-5 xl:py-4 xl:px-6 rounded inline-block">Explore
+                            Our Work
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-right-bottom"
+                    style="background-image: url('assets/i2.webp')">
+                    <div
+                        class="flex flex-col items-center h-full justify-center p-4 lg:px-52 xl:px-68 text-center bg-black/60">
+                        <h2 class="text-xl lg:text-4xl xl:text-5xl text-white tracking-widest mb-6 lg:mb-8 font-bold">
+                            Materials That Speak Luxury
+                        </h2>
+                        <p class="text-sm lg:text-xl xl:text-2xl font-semibold text-gray-200 mb-8 tracking-wider">
+                            From natural finishes to expressive textures, every material is
+                            chosen with intention — delivering sensory-rich spaces that feel
+                            grounded, sophisticated, and timeless.
+                        </p>
+                        <a href=""
+                            class="border border-gray-200 text-white text-xs lg:text-sm font-semibold xl:text-base py-2.5 px-5 xl:py-4 xl:px-6 rounded inline-block">Start
+                            Your Project
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-left-bottom"
+                    style="background-image: url('assets/i1.webp')">
+                    <div
+                        class="flex flex-col items-center h-full justify-center px-4 lg:px-52 xl:px-68 text-center bg-black/60">
+                        <h2 class="text-xl lg:text-4xl xl:text-5xl text-white tracking-widest mb-6 lg:mb-8 font-bold">
+                            Bold Concepts. Timeless Creations
+                        </h2>
+                        <p class="text-sm lg:text-xl xl:text-2xl font-semibold text-gray-200 mb-8 tracking-wider">
+                            At INTTIZO, we bring visions to life with bold creativity,
+                            precision, and innovation. From concept to creation, we craft
+                            spaces and solutions that speak for themselves.
+                        </p>
+                        <a href=""
+                            class="border border-gray-200 text-white text-xs lg:text-sm font-semibold xl:text-base py-2.5 px-5 xl:py-4 xl:px-6 rounded inline-block">Get
+                            In Touch</a>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="content">
-            <h1>COMING SOON</h1>
-            <p>We're building something beautiful. Stay tuned.</p>
+    </div>
+    <!-- category Icon Section -->
+    <div class="bg-white">
+        <div class='grid grid-cols-12'>
+            <div class="col-span-12 lg:col-span-3 bg-[var(--orange-custom)] flex items-center justify-center lg:justify-end text-white py-6 lg:py-8 xl:py-12 lg:px-6">
+                <h3 class="text-lg lg:text-lg xl:text-xl font-bold tracking-wider text-center lg:text-right">
+                    <span class="block font-semibold text-xl">Timeless Interiors</span> Explore by Living Space
+                </h3>
+            </div>
+            <div class="col-span-12 lg:col-span-9">
+                <div class="grid grid-cols-5 h-full">
+                    <div class="text-center p-4">
+                        <div class="w-full h-fit lg:h-16 xl:h-20 overflow-hidden icon">
+                            <img src="assets/icon/living.png" alt="Icon 1" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-hide" />
+                            <img src="assets/icon/living1.png" alt="Icon 1" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-show" />
+                        </div>
+                        <h3 class="text-center text-xs lg:text-base xl:text-lg font-semibold text-gray-800 mt-2">
+                            Living Room
+                        </h3>
+                    </div>
+                    <div class="text-center p-4 ">
+                        <div class="w-full h-fit lg:h-16 xl:h-20 overflow-hidden icon">
+                            <img src="assets/icon/kitchen.png" alt="Icon 2" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-hide" />
+                            <img src="assets/icon/kitchen1.png" alt="Icon 2" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-show" />
+                        </div>
+                        <h3 class="text-center text-xs lg:text-base xl:text-lg font-semibold text-gray-800 mt-2">
+                            Kitchen Design
+                        </h3>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="w-full h-fit lg:h-16 xl:h-20 overflow-hidden icon">
+                            <img src="assets/icon/bedroom.png" alt="Icon 3" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-hide" />
+                            <img src="assets/icon/bedroom1.png" alt="Icon 3" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-show" />
+                        </div>
+                        <h3 class="text-center text-xs lg:text-base xl:text-lg font-semibold text-gray-800 mt-2">
+                            Bedroom
+                        </h3>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="w-full h-fit lg:h-16 xl:h-20 overflow-hidden icon">
+                            <img src="assets/icon/furniture.png" alt="Icon 4" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-hide" />
+                            <img src="assets/icon/furniture1.png" alt="Icon 4" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-show" />
+                        </div>
+                        <h3 class="text-center text-xs lg:text-base xl:text-lg font-semibold text-gray-800 mt-2">
+                            Office Furniture
+                        </h3>
+                    </div>
+                    <div class='text-center p-4'>
+                        <div class="overflow-hidden w-full h-fit lg:h-16 xl:h-20 icon">
+                            <img src="assets/icon/bathroom.png" alt="Icon 4" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-hide" />
+                            <img src="assets/icon/bathroom1.png" alt="Icon 4" class="mx-auto w-full lg:w-fit lg:h-full object-cover icon-show" />
+                        </div>
+                        <h3 class="text-center text-xs lg:text-base xl:text-lg font-semibold text-gray-800 mt-2">
+                            Bathroom Vanities
+                        </h3>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
+    <!-- about Us section -->
+    <div class="about w-full h-fit pt-20 pb-10 lg:px-16 xl:px-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="flex px-2">
+                <div class="swiper aboutUsSwiper h-[40vh] lg:h-[80vh]">
+                    <div class="swiper-wrapper w-full h-[70vh] shadow-md">
+                        <!-- Slides -->
+                        <div class="swiper-slide group relative h-full">
+                            <img src="assets/i1.webp" alt="" class="w-full h-full object-cover" />
+                            <div
+                                class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                                <h3 class="text-lg font-bold">INTTIZO</h3>
+                                <p class="text-sm">Crafting Spaces with Intention</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group relative h-full">
+                            <img src="assets/i2.webp" alt="" class="w-full h-full object-cover" />
+                            <div
+                                class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                                <h3 class="text-lg font-bold">INTTIZO</h3>
+                                <p class="text-sm">Crafting Spaces with Intention</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group relative h-full">
+                            <img src="assets/i1.webp" alt="" class="w-full h-full object-cover" />
+                            <div
+                                class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                                <h3 class="text-lg font-bold">INTTIZO</h3>
+                                <p class="text-sm">Crafting Spaces with Intention</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 lg:px-8 xl:pl-12 xl:pr-4 flex flex-col justify-center items-start">
+                <small class="text-xs font-bold text-[var(--orange-custom)] my-4">ABOUT US</small>
+                <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800">
+                    Welcome to INTTIZO — Where Design Meets Intention
+                </h2>
+                <p
+                    class="text-sm lg:text-sm xl:text-base font-normal text-gray-400 mt-4 lg:mt-4 xl:mt-8 text-justify xl:mr-8">
+                    INTTIZO is a modern design platform committed to crafting refined,
+                    functional, and aesthetically timeless spaces. With a passion for
+                    minimalism and meaningful detail, we specialize in interiors and
+                    architectural concepts that elevate everyday living.
+                </p>
+                <p class="text-sm lg:text-sm xl:text-base font-normal text-gray-400 mt-3 text-justify xl:mr-8">
+                    Whether it's a personal residence or a commercial vision, we
+                    approach each project with a deep respect for clarity, comfort, and
+                    creativity — shaping environments that not only look stunning but
+                    feel purposeful.
+                </p>
+                <p class="text-sm lg:text-sm xl:text-base font-normal text-gray-400 mt-3 text-justify xl:mr-8 mb-8">
+                    Every project we take on reflects our core philosophy — simplicity
+                    with soul. Whether it's a residential transformation or a commercial
+                    concept, our work is a reflection of balance, creativity, and
+                    meticulous craftsmanship.
+                </p>
+                <a href="about.html"
+                    class="p-4 py-2 border border-gray-300  flex gap-x-1 justify-center items-center text-sm lg:text-xs xl:text-sm">Read
+                    More<i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- What we do -->
+    <div class="what-we-do w-full h-fit py-10 lg:pb-20 px-4 lg:px-16 xl:px-32">
+        <div class="lg:w-[60%] mx-auto lg:text-center">
+            <small class="text-xs font-bold text-[var(--orange-custom)] my-4 uppercase">What we do</small>
+            <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 my-2">
+                Crafting Experiences Through Design
+            </h2>
+            <p class="text-base lg:text-lg font-normal text-gray-600 lg:text-center mt-4">
+                At INTTIZO, we believe in the power of design to transform lives. Our
+                commitment to quality, innovation, and client satisfaction sets us
+                apart.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 mt-8 gap-4">
+            <div class="shadow-sm  p-4 lg:p-3 xl:p-4">
+                <div class="rounded-lg p-6 lg:p-4 xl:p-6 flex flex-col ">
+                    <div class="overflow-hidden w-20">
+                        <img src="assets/icon/interior.png" alt="Interior Design"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl lg:text-lg xl:text-xl font-bold text-[var(--orange-custom)]">
+                            Interior Design & Styling
+                        </h3>
+                        <p class="lg:text-xs xl:text-base font-normal text-gray-500 mt-3">
+                            Thoughtful, clean, and expressive interiors built around your
+                            lifestyle and brand identity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-sm  p-4 lg:p-3 xl:p-4">
+                <div class="rounded-lg p-6 lg:p-4 xl:p-6 flex flex-col">
+                    <div class="overflow-hidden w-20">
+                        <img src="assets/icon/architect.png" alt="Architecture and Planning"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl lg:text-lg xl:text-xl font-bold text-[var(--orange-custom)]">
+                            Spatial Planning & Architecture
+                        </h3>
+                        <p class="lg:text-xs xl:text-base font-normal text-gray-500 mt-3">
+                            Efficient, harmonious layouts that prioritize light, space, and
+                            flow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-sm  p-4 lg:p-3 xl:p-4">
+                <div class="rounded-lg p-6 lg:p-4 xl:p-6 flex flex-col">
+                    <div class="overflow-hidden w-20">
+                        <img src="assets/icon/hook.png" alt="Material curation"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl lg:text-lg xl:text-xl font-bold text-[var(--orange-custom)]">
+                            Material & Concept Curation
+                        </h3>
+                        <p class="lg:text-xs xl:text-base font-normal text-gray-500 mt-3">
+                            From textures to tones, every material is handpicked to evoke
+                            elegance and comfort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery -->
+    <div class="px-4 lg:px-12 bg-black/90 lg:py-20">
+        <div class="lg:w-[60%] mx-auto lg:text-center">
+            <small class="text-xs font-bold text-[var(--orange-custom)] my-4 uppercase">Our Gallery</small>
+            <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-white my-2">
+                A Glimpse Into Inspired Living
+            </h2>
+            <p class="text-base lg:text-lg font-normal text-gray-200 lg:text-center mt-4">
+                Browse our gallery to see how thoughtful materials, innovative design, and skilled craftsmanship come together to shape extraordinary spaces.
+            </p>
+        </div>
+        <div class="grid grid-cols-12 gap-6 mt-10">
+            <div class="col-span-4">
+                <img src="assets/furniture.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="col-span-8">
+                <div class="w-full h-[50vh]">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="w-full h-[50vh] overlfow-hidden">
+                            <img src="assets/l-shape.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full h-[50vh] overflow-hidden">
+                            <img src="assets/u-shape.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[50vh] mt-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="w-full h-[50vh] overlfow-hidden">
+                            <img src="assets/parallel.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full h-[50vh] overflow-hidden">
+                            <img src="assets/straight.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-8">
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-8">
+                        <div class="w-full h-[50vh]">
+                            <img src="assets/island-type.jpg" alt="" class=" w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="col-span-4">
+                        <div class="w-full h-[50vh]">
+                            <img src="assets/chair.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 gap-6 mt-6">
+                    <div class="col-span-4">
+                        <div class="w-full h-[50vh]">
+                            <img src="assets/chair1.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="col-span-8">
+                        <div class="w-full h-[50vh]">
+                            <img src="assets/tv2.jpg" alt="" class=" w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4">
+                <img src="assets/vanities2.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+    <!-- CTA Parallax -->
+    <div class="w-full h-[50vh] lg:h-[70vh] relative bg-bottom-right flex justify-center items-center bg-fixed no-repeat bg-cover"
+        style="background-image: url('assets/i2.webp')">
+        <div class="bg-[var(--orange-custom)] flex items-center justify-center lg:w-fit lg:py-16 py-8 m-8 lg:m-0">
+            <div class=" text-white px-8 lg:px-24 xl:px-24">
+                <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold mb-6">Ready to Transform <br class="hidden lg:inline">Your Space?</h2>
+                
+                <a href="about.html"
+                    class="p-4 py-2 border border-gray-300 w-fit flex gap-x-1 justify-center items-center text-sm lg:text-xs xl:text-sm ">Contact Us</a>
+            </div>
+        </div>
+    </div>
 
-    <footer aria-label="site-footer">
-        <p>&copy; 2025 INTTIZO. All rights reserved. <a href="https://www.rantechnology.in" target="_blank">Powered BY Rantechnology</a></p>
-    </footer> -->
+    <!-- why choose us -->
+    
+    <!-- contact us -->
+    <div class="w-full py-20 lg:px-16 xl:px-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 bg-white rounded-xs">
+            <div class="lg:col-span-5 relative mb-10">
+                <div class="lg:absolute inset-0 bg-gray-100 rounded-r-xs overflow-hidden w-[110%]">
+                    <img src="assets/i1.webp" alt="" class="w-full h-full object-cover rounded-r-xs" />
+                </div>
+            </div>
+            <div class="lg:p-8 lg:col-span-7 shadow-sm mb-10">
+                <h2 class="text-3xl lg:text-3xl xl:text-4xl font-bold text-gray-800 text-center mb-6">
+                    Get In Touch
+                </h2>
+                <form action="" class="p-6 py-4 lg:pl-20">
+                    <div class="my-1 p-0.8">
+                        <label for="name" class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Full
+                            Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name"
+                            class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4">
+                        <div class="my-1 p-0.8">
+                            <label for="email"
+                                class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Email
+                                Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email"
+                                class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
+                        </div>
+                        <div class="my-1 p-0.8">
+                            <label for="phone"
+                                class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Phone
+                                Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
+                        </div>
+                    </div>
+                    <div class="my-1 p-0.8">
+                        <label for="subject"
+                            class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter the subject"
+                            class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400" />
+                    </div>
+                    <div class="my-1 p-0.8">
+                        <label for="message"
+                            class="text-gray-500 text-sm lg:text-xs xl:text-sm font-semibold py-1">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message"
+                            class="w-full p-3 rounded-md border-b border-gray-300 text-sm outline-none text-gray-400"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-2.5 mt-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- contact info -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 mt-10 gap-4">
+            <div class="p-3 shadow-xs">
+                <div class="flex flex-col p-4 align-center text-center">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/location.png" alt="" class="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <address class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Address: </span>1234 Street Name, City, State,
+                        12345
+                    </address>
+                </div>
+            </div>
+            <div class="p-3 shadow-xs">
+                <div class="flex flex-col p-4 align-center text-center">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/envelop.png" alt="" class="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <p class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Email: </span><a
+                            href="mailto:info@example.com">info@example.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="p-3 shadow-xs">
+                <div class="flex flex-col p-4 align-center text-center">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/call.png" alt="" class="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <p class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Phone: </span><a href="tel:11000110011">
+                            +91-1100-011-011</a>
+                    </p>
+                </div>
+            </div>
+            <div class="p-3 shadow-xs">
+                <div class="flex flex-col p-4 align-center text-center">
+                    <div
+                        class="flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 xl:w-20 xl:h-20 border border-gray-300 rounded-full mb-4 overflow-hidden mx-auto">
+                        <img src="assets/icon/internet.png" alt="" class="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <p class="inline text-base text-gray-500">
+                        <span class="text-lg font-semibold text-gray-600">Website: </span><a
+                            href="https://inttizo.com/">inttizo.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Post -->
+    <div class="w-full py-10 lg:pt-0 lg:pb-20 px-4 lg:px-16 xl:px-32">
+        <div class="lg:w-[60%] mx-auto lg:text-center">
+            <small class="text-xs font-bold text-[var(--orange-custom)] my-4">OUR BLOG</small>
+            <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 my-2">
+                From the INTTIZO Journal
+            </h2>
+            <p class="text-base lg:text-lg font-normal text-gray-600 lg:text-center mt-4">
+                Insights, inspirations, and stories from the world of design, material, and modern living
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 mt-10">
+            <div class="p-3 mb-4">
+                <div class="blog shadow-md rounded-md">
+                    <div class="blog-img-wrapper overflow-hidden rounded-md border-b border-gray-100">
+                        <a href="#"><img src="assets/blog1.jfif" alt="blog" class="w-full h-[200px] object-cover"></a>
+                    </div>
+                    <div class="blog-content-wrapper p-3">
+                        <h3 class="text-xl lg:text-base xl:text-xl font-bold text-gray-800">Timeless Materials for Modern Interiors</h3>
+                        <div class="border border-[var(--orange-custom)] w-12 rounded-lg mt-2 mb-4"></div>
+                        <p class="lg:text-xs xl:text-base font-normal text-gray-500 my-3">Explore how the right textures — from natural stone to custom veneers — can bring warmth, elegance, and durability to your home.</p>
+                        <a href="#"
+                    class="p-4 py-2 border border-gray-300 w-fit flex gap-x-1 justify-center items-center text-sm lg:text-xs xl:text-sm ">Read More<i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 mb-4">
+                <div class="blog shadow-md rounded-md">
+                    <div class="blog-img-wrapper overflow-hidden rounded-md border-b border-gray-100">
+                        <a href="#"><img src="assets/blog2.jfif" alt="blog" class="w-full h-[200px] object-cover"></a>
+                    </div>
+                    <div class="blog-content-wrapper p-3">
+                        <h3 class="text-xl lg:text-base xl:text-xl font-bold text-gray-800">Minimalism, Done Right: Designing with Intent</h3>
+                        <div class="border border-[var(--orange-custom)] w-12 rounded-lg mt-2 mb-4"></div>
+                        <p class=" lg:text-xs xl:text-base font-normal text-gray-500 my-3">Learn how thoughtful spatial planning and functional design can transform any space into a clean, calming, and expressive environment.</p>
+                        <a href="#"
+                    class="p-4 py-2 border border-gray-300 w-fit flex gap-x-1 justify-center items-center text-sm lg:text-xs xl:text-sm ">Read More<i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 mb-4">
+                <div class="blog shadow-md rounded-md">
+                    <div class="blog-img-wrapper overflow-hidden rounded-md border-b border-gray-100">
+                        <a href="#"><img src="assets/blog3.jfif" alt="blog" class="w-full h-[200px] object-cover"></a>
+                    </div>
+                    <div class="blog-content-wrapper p-3">
+                        <h3 class="text-xl lg:text-base xl:text-xl font-bold text-gray-800">The Craft Behind Custom Furniture & Joinery</h3>
+                        <div class="border border-[var(--orange-custom)] w-12 rounded-lg mt-2 mb-4"></div>
+                        <p class="lg:text-xs xl:text-base font-normal text-gray-500 my-3">Behind every INTTIZO piece is precision, care, and collaboration. Go inside our studio process and the artistry behind our custom designs.</p>
+                        <a href="#"
+                    class="p-4 py-2 border border-gray-300 w-fit flex gap-x-1 justify-center items-center text-sm lg:text-xs xl:text-sm ">Read More<i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="w-full bg-black/90 pt-20 px-2 lg:px-16 xl:px-28">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 border border-gray-300 bg-white p-8 lg:p-6 xl:p-8 text-gray-300">
+            <div class="grid grid-cols-12 p-2 box-border">
+                <div class="col-span-3">
+                    <div class="w-16 h-16 xl:w-20 xl:h-20">
+                        <img src="assets/icon/call.png" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="col-span-9 flex flex-col justify-center pl-4">
+                    <span class="uppercase text-gray-800 font-bold text-lg mb-2 lg:mb-1 xl:mb-2">Call Us</span>
+                    <a href="tel:1100110011"
+                        class="text-gray-400 text-sm lg:text-xs xl:text-sm font-semibold hover:text-yellow-700 transition-all duration-200">+91-1100-011-011</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-2">
+                <div class="col-span-3">
+                    <div class="w-16 h-16 xl:w-20 xl:h-20">
+                        <img src="assets/icon/location.png" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="col-span-9 flex flex-col justify-center pl-4">
+                    <span class="uppercase text-gray-800 font-bold text-lg mb-2 lg:mb-1 xl:mb-2">Address</span>
+                    <address
+                        class="text-gray-400 text-sm lg:text-xs xl:text-sm font-semibold hover:text-yellow-700 transition-all duration-200">
+                        1234 Street Name, City, State, 12345
+                    </address>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-2">
+                <div class="col-span-3">
+                    <div class="w-16 h-16 xl:w-20 xl:h-20">
+                        <img src="assets/icon/envelop.png" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="col-span-9 flex flex-col justify-center pl-4">
+                    <span class="uppercase text-gray-800 font-bold text-lg mb-2 lg:mb-1 xl:mb-2">Write To us</span>
+                    <a href="mailto:info@inttizo.com"
+                        class="text-gray-400 text-sm lg:text-xs xl:text-sm font-semibold hover:text-yellow-700 transition-all duration-200">info@inttizo.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="py-8 grid grid-cols-1 lg:grid-cols-12">
+            <div class=" col-span-4">
+                <div class="p-2 lg:pr-4">
+                    <div class="logo h-24 lg:h-16 xl:h-24 flex">
+                        <img src="assets/logo.png" alt="" class="h-full object-cover" />
+                    </div>
+                    <p class="text-sm xl:text-base text-gray-400 lg:my-4 xl:my-6 font-semibold">
+                        INTTIZO is a design-first studio crafting refined spaces through
+                        thoughtful interiors, functional architecture, and curated
+                        materials — where form meets purpose with timeless appeal.
+                    </p>
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/INTTIZO" target="_blank"
+                            class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-brands fa-facebook-f xl:text-lg"></i></a>
+                        <a href="https://www.instagram.com/inttizo/" target="_blank"
+                            class="flex items-center justify-center text-white bg-blue-500 hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-brands fa-instagram xl:text-lg"></i></a>
+                        <a href="https://www.linkedin.com/company/inttizo/" target="_blank"
+                            class="flex items-center justify-center text-white bg-blue-500 hover:bg-white hover:text-yellow-700 transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-brands fa-linkedin-in xl:text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="p-2 lg:p-4">
+                        <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
+                            Quick Links
+                        </h3>
+                        <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                        <ul class="space-y-1 lg:mx-2">
+                            <li>
+                                <a href="index.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">About
+                                    Us</a>
+                            </li>
+
+                            <li>
+                                <a href="portfolio.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="contact.html"
+                                    class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Contact
+                                    Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="p-2 lg:p-4">
+                            <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
+                                Our Services
+                            </h3>
+                            <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                            <ul class="space-y-1 lg:px-2">
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
+                                        Kitchen</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
+                                        Wardrobe</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bedroom</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Living Room</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bathroom Vanities</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Office Furniture</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-2 lg:p-4">
+                            <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
+                                Kitchen Design
+                            </h3>
+                            <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                            <ul class="space-y-1 lg:mx-2">
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Island Shape</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">L-Shape</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Parallel</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Straight</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">U-Shape</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">G-Shape</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm lg:text-xs xl:text-sm py-4 border-t border-gray-200">
+            <p>
+                &copy; 2025 INTTIZO. All rights reserved.
+                <a href="https://rantechnology.in/" target="_blank"
+                    class="hover:text-gray-200 transition-all duration-200">
+                    Designed and Powered by Rantechnology</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
