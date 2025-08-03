@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded',()=>{
     setTimeout(()=>{
         popupContainer.classList.remove('hidden');
         setTimeout(()=>{
-            popupContainer.addEventListener('click',()=>{
-                popupContainer.classList.add('hidden');
-            })
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest('#form-area')) {
+                    popupContainer.classList.add('hidden');
+                }
+            });
         },2000)
     }, 3000)
 
@@ -34,3 +36,26 @@ document.addEventListener('DOMContentLoaded',()=>{
     })
     
 })
+
+function toggleSubmenu(){
+    const submenu = document.getElementById('categorySubmenu');
+    submenu.classList.toggle('hidden');
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest('.nav-list')) {
+            submenu.classList.add('hidden');
+        }
+    });
+}
+
+$('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            "slideShow",
+            "thumbs",
+            "zoom",
+            "fullScreen",
+            "share",
+            "close"
+        ],
+        loop: false,
+        protect: true
+    });
