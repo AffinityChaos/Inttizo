@@ -17,32 +17,101 @@
 <body>
     <!-- header -->
     <header id="header" class='w-full  absolute top-0 left-0 z-100 bg-black/90 lg:bg-transparent'>
-        <div class="header-wrapper flex flex-row justify-between items-center h-16 lg:h-16 xl:h-20 px-4 lg:px-16 xl:px-24">
+        <div
+            class="header-wrapper flex flex-row justify-between items-center h-16 lg:h-16 xl:h-20 px-4 lg:px-16 xl:px-24">
             <div class="logo">
                 <img src="assets/logo.png" alt="" class="h-12 lg:h-8 xl:h-12 object-cover" />
             </div>
-            
-            <button class="lg:hidden menu-button text-xl text-gray-200 hover:text-gray-50 transition-all duration-200 " onclick="document.getElementById('navbar').classList.toggle('hidden')">
+
+            <button class="lg:hidden menu-button text-xl text-gray-200 hover:text-gray-50 transition-all duration-200 "
+                onclick="document.getElementById('navbar').classList.toggle('hidden')">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <nav id="navbar" class="absolute hidden top-0 left-0 bg-black/98 h-[calc(100vh-1rem)] lg:h-fit lg:bg-transparent w-full lg:w-fit lg:static lg:block p-4 lg:p-0">
+            <nav id="navbar"
+                class="absolute hidden top-0 left-0 bg-black/98 h-[calc(100vh-1rem)] lg:h-fit lg:bg-transparent w-full lg:w-fit lg:static lg:block p-4 lg:p-0">
                 <div class="lg:hidden mb-8 flex justify-between items-center">
                     <div class="logo">
                         <img src="assets/logo.png" alt="" class="h-16 object-cover" />
                     </div>
                     <div class="lg:hidden relative top-2 right-2 ">
-                            <button class="flex items-center justify-center text-white hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i class="fa-solid fa-xmark" onclick="document.getElementById('navbar').classList.toggle('hidden')"></i></button>
-                        </div>
+                        <button
+                            class="flex items-center justify-center text-white hover:text-yellow-700 hover:bg-white transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
+                                class="fa-solid fa-xmark"
+                                onclick="document.getElementById('navbar').classList.toggle('hidden')"></i></button>
+                    </div>
                 </div>
-                
+
                 <ul class='flex flex-col lg:flex-row lg:justify-center lg:items-center lg:gap-x-8'>
-                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="index.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all ">Home</a></li>
-                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="about.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">About Us</a></li>
-                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="services.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Services</a></li>
-                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="gallery.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Gallery</a></li>
-                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="blog.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Blog</a></li>
-                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="contact.html" class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Contact Us</a></li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="index.html"
+                            class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all ">Home</a>
+                    </li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="about.html"
+                            class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">About
+                            Us</a></li>
+                    <!-- Mobile Category -->
+                    <li class="lg:hidden nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none">
+                        <button type="button" onclick="toggleSubmenu()"
+                            class="nav-link w-full text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all text-left">
+                            Category
+                        </button>
+                        <ul id="categorySubmenu"
+                            class="m-3">
+                            <li class="border-t border-gray-300"><a href="category/kitchen.html"
+                                    class="block px-4 py-2 text-lg  text-gray-200  hover:text-white transition-all">Modular
+                                    Kitchen</a></li>
+                            <li class="border-t border-gray-300"><a href="category/wardrobe.html"
+                                    class="block px-4 py-2 text-lg text-gray-200  hover:text-white transition-all">Modular
+                                    Wardrobe</a></li>
+                            <li class="border-t border-gray-300"><a href="category/bathroom.html"
+                                    class="block px-4 py-2 text-lg text-gray-200  hover:text-white transition-all">Bathroom
+                                    Vanities</a></li>
+                            <li class="border-t border-gray-300"><a href="category/living-room.html"
+                                    class="block px-4 py-2 text-lg text-gray-200  hover:text-white transition-all">Living
+                                    Room</a></li>
+                            <li class="border-t border-gray-300"><a href="category/bedroom.html"
+                                    class="block px-4 py-2 text-lg text-gray-200  hover:text-white transition-all">Bedroom</a></li>
+                            <li class="border-t border-gray-300"><a href="category/office.html"
+                                    class="block px-4 py-2 text-lg text-gray-200  hover:text-white transition-all">Office
+                                    Furniture</a></li>
+                        </ul>
+                    </li>
+                    <!-- desktop category -->
+                    <li class="hidden lg:flex nav-list relative group py-2 lg:py-0 border-t border-gray-300 lg:border-none">
+                        <a href="category.html"
+                            class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">
+                            Category
+                        </a>
+                        <!-- <ul id="categorySubmenu"
+                            class="submenu absolute left-0 top-full mt-2 lg:mt-4 bg-black border border-gray-700 rounded-md shadow-lg w-52 hidden group-hover:block z-50">
+                            <li><a href="category/kitchen.html"
+                                    class="block px-4 py-2 text-sm text-gray-200  hover:text-white transition-all">Modular
+                                    Kitchen</a></li>
+                            <li><a href="category/wardrobe.html"
+                                    class="block px-4 py-2 text-sm text-gray-200  hover:text-white transition-all">Modular
+                                    Wardrobe</a></li>
+                            <li><a href="category/bathroom.html"
+                                    class="block px-4 py-2 text-sm text-gray-200  hover:text-white transition-all">Bathroom
+                                    Vanities</a></li>
+                            <li><a href="category/living-room.html"
+                                    class="block px-4 py-2 text-sm text-gray-200  hover:text-white transition-all">Living
+                                    Room</a></li>
+                            <li><a href="category/bedroom.html"
+                                    class="block px-4 py-2 text-sm text-gray-200  hover:text-white transition-all">Bedroom</a></li>
+                            <li><a href="category/office.html"
+                                    class="block px-4 py-2 text-sm text-gray-200  hover:text-white transition-all">Office
+                                    Furniture</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="gallery.html"
+                            class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Gallery</a>
+                    </li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="blog.html"
+                            class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Blog</a>
+                    </li>
+                    <li class="nav-list py-2 lg:py-0 border-t border-gray-300 lg:border-none"><a href="contact.html"
+                            class="nav-link text-lg lg:text-base font-semibold text-gray-200 hover:text-gray-50 transition-all">Contact
+                            Us</a></li>
                 </ul>
                 <div class="flex lg:hidden gap-3 mt-4">
                     <a href="https://www.facebook.com/INTTIZO" target="_blank"
@@ -55,7 +124,7 @@
                         class="flex items-center justify-center text-white bg-blue-500 hover:bg-white hover:text-yellow-700 transition-all duration-200 border border-gray-300 p-2 w-8 h-8 xl:w-12 xl:h-12"><i
                             class="fa-brands fa-linkedin-in xl:text-lg"></i></a>
                 </div>
-                
+
             </nav>
         </div>
     </header>
@@ -103,7 +172,7 @@
                 </div>
             </div>
             <div class="px-4 lg:px-8 xl:pl-12 xl:pr-4 flex flex-col justify-center items-start">
-                <small class="text-xs font-bold text-[var(--orange-custom)] my-4">ABOUT US</small>
+                <small class="text-xs font-bold text-[var(--orange-custom)] my-4 tracking-wider">ABOUT US</small>
                 <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800">
                     Welcome to INTTIZO — Where Design Meets Intention
                 </h2>
@@ -135,7 +204,7 @@
     <!-- What we do -->
     <div class="what-we-do w-full h-fit py-10 lg:pb-20 px-4 lg:px-16 xl:px-32">
         <div class="lg:w-[60%] mx-auto lg:text-center">
-            <small class="text-xs font-bold text-[var(--orange-custom)] my-4 uppercase">What we do</small>
+            <small class="text-xs font-bold text-[var(--orange-custom)] my-4 uppercase tracking-wider">What we do?</small>
             <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 my-2">
                 Crafting Experiences Through Design
             </h2>
@@ -149,8 +218,7 @@
             <div class="shadow-sm  p-4 lg:p-3 xl:p-4">
                 <div class="rounded-lg p-6 lg:p-4 xl:p-6 flex flex-col ">
                     <div class="overflow-hidden w-20">
-                        <img src="assets/icon/interior.png" alt="Interior Design"
-                            class="w-full h-full object-cover" />
+                        <img src="assets/icon/interior.png" alt="Interior Design" class="w-full h-full object-cover" />
                     </div>
                     <div class="mt-4">
                         <h3 class="text-xl lg:text-lg xl:text-xl font-bold text-[var(--orange-custom)]">
@@ -183,8 +251,7 @@
             <div class="shadow-sm  p-4 lg:p-3 xl:p-4">
                 <div class="rounded-lg p-6 lg:p-4 xl:p-6 flex flex-col">
                     <div class="overflow-hidden w-20">
-                        <img src="assets/icon/hook.png" alt="Material curation"
-                            class="w-full h-full object-cover" />
+                        <img src="assets/icon/hook.png" alt="Material curation" class="w-full h-full object-cover" />
                     </div>
                     <div class="mt-4">
                         <h3 class="text-xl lg:text-lg xl:text-xl font-bold text-[var(--orange-custom)]">
@@ -203,7 +270,7 @@
     <!-- footer -->
     <div class="w-full bg-black/90 pt-20 px-2 lg:px-16 xl:px-28">
         <div
-            class="grid grid-cols-1 lg:grid-cols-3 gap-8 border border-gray-300 bg-white p-8 lg:p-6 xl:p-8 text-gray-300">
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 border border-gray-300 bg-white m-2 lg:m-0 p-8 lg:p-6 xl:p-8 text-gray-300">
             <div class="grid grid-cols-12 p-2 box-border">
                 <div class="col-span-3">
                     <div class="w-16 h-16 xl:w-20 xl:h-20">
@@ -273,7 +340,7 @@
                         <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
                             Quick Links
                         </h3>
-                        <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                        <div class="border border-[var(--orange-custom)] w-12 rounded-lg mb-4"></div>
                         <ul class="space-y-1 lg:mx-2">
                             <li>
                                 <a href="index.html"
@@ -303,23 +370,32 @@
                     <div>
                         <div class="p-2 lg:p-4">
                             <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
-                                Our Services
+                                Our Category
                             </h3>
-                            <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                            <div class="border border-[var(--orange-custom)] w-12 rounded-lg mb-4"></div>
                             <ul class="space-y-1 lg:px-2">
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
                                         Kitchen</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Modular
                                         Wardrobe</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bedroom</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bedroom</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Living Room</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Living
+                                        Room</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bathroom Vanities</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Bathroom
+                                        Vanities</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Office Furniture</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Office
+                                        Furniture</a>
                                 </li>
                             </ul>
                         </div>
@@ -329,19 +405,26 @@
                             <h3 class="text-xl font-bold text-gray-400 mb-2 uppercase">
                                 Kitchen Design
                             </h3>
-                            <div class="border border-yellow-800 w-12 rounded-lg mb-4"></div>
+                            <div class="border border-[var(--orange-custom)] w-12 rounded-lg mb-4"></div>
                             <ul class="space-y-1 lg:mx-2">
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Island Shape</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Island
+                                        Shape</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">L-Shape</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">L-Shape</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Parallel</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Parallel</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Straight</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">Straight</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">U-Shape</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">U-Shape</a>
                                 </li>
-                                <li><a href="#" class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">G-Shape</a>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-gray-200 transition-all duration-200 text-base">G-Shape</a>
                                 </li>
                             </ul>
                         </div>
@@ -359,7 +442,60 @@
         </div>
     </div>
 
+    <!-- Popup Form -->
+    <div id='popupContainer' class="hidden fixed top-0 left-0 w-full h-full z-1000">
+        <div class="w-full h-full flex items-center justify-center bg-black/40">
+            <div class="shadow-md shadow-black rounded-lg lg:w-[36vw] w-full flex flex-col md:flex-row m-4 bg-white relative" id="form-area">
+                <div
+                    class="lg:w-[54%] overflow-hidden rounded-tl-lg rounded-tr-lg lg:rounded-none lg:rounded-l-lg h-[30vh] lg:h-[60vh] popUpImage-wrapper">
+                    <img src="assets/i1.webp" alt=""
+                        class="w-full h-full object-cover rounded-tl-lg rounded-tr-lg lg:rounded-none lg:rounded-l-lg">
+                </div>
+                <div class="lg:w-[46%] flex flex-col p-5 justify-center">
+                    <h1 class="text-3xl lg:text-xl xl:text-3xl font-bold text-[var(--orange-custom)]">Contact Us</h1>
+                    <p class="text-sm lg:text-xs xl:text-sm mb-4 mt-2 text-gray-500">If you have any questions, feel free to reach out!</p>
+                    <form action="">
+                        <div class="mb-3">
+                            <input type="text" placeholder="Enter your name"
+                                class="w-full px-3 py-2 lg:py-1.5 xl:py-2 border border-gray-200 outline-none text-xs text-gray-400"
+                                name="name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" placeholder="Enter your phone number"
+                                class="w-full px-3 py-2 lg:py-1.5 xl:py-2 border border-gray-200 outline-none text-xs text-gray-400"
+                                name="phone">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full px-3 py-2 lg:py-1.5 xl:py-2 border border-gray-200 outline-none text-xs text-gray-400"
+                                name="email">
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea placeholder="Enter your message"
+                                class="w-full px-3 py-2 lg:py-1.5 xl:py-2 border border-gray-200 outline-none text-xs text-gray-400"
+                                rows="3" name="message"></textarea>
+                        </div>
+                        <button type="submit"
+                            class=" text-xs font-bold text-gray-800 border border-gray-300 text-center px-3 py-2 w-full hover:border-none hover:text-white hover:bg-[var(--orange-custom)] transition-all duration-800">Submit</button>
+                    </form>
+
+                </div>
+                <div class="absolute top-4 right-4 z-10">
+                    <button
+                        class=" bg-gray-200 text-gray-500 rounded-full  h-6 w-6 flex justify-center items-center hover:bg-gray-300 focus:outline-none"
+                        id='closeBtn'>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>

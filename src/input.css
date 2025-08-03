@@ -35,24 +35,30 @@ img{
 }
 
 
-.card:before {
+.testimonial-card:before {
     position: absolute;
     content: '';
     left: 0;
     top: 0;
-    width: 100%;
+    width: 104%;
     bottom: 2px;
     transition: 0.5s;
     opacity: 0;
-    transform: perspective(400px) rotateX(-90deg); /* Makes it fold upwards initially */
+    transform: perspective(400px) rotateY(90deg); /* Makes it fold upwards initially */
     transform-origin: top;
     background-color: #ce7141;
-    border-radius:8px;
+    z-index:-2;
 }
 
-.card:hover:before {
+.testimonial-card:hover:before {
     opacity: 1;
-    transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateY(0deg);
+}
+.testimonial-card:hover h3, .testimonial-card:hover span{
+    color:#fff;
+}
+.testimonial-card:hover small, .testimonial-card:hover p{
+    color:#ccc;
 }
 .heroSwiper .swiper-pagination-bullet {
   background-color: #ccc; /* Light gray background */
@@ -186,7 +192,7 @@ button{
 
 
 
-.category .swiper-button-next, .category .swiper-button-prev {
+.category .swiper-button-next, .category .swiper-button-prev, .testimonial .swiper-button-next, .testimonial .swiper-button-prev {
   color: black;
   position:absolute;
   top:50%;
@@ -195,7 +201,7 @@ button{
   background: white;
   transition:background 0.5s ease, color 0.5s ease;
 }
-.category .swiper-button-next:hover, .category .swiper-button-prev:hover{
+.category .swiper-button-next:hover, .category .swiper-button-prev:hover, .testimonial .swiper-button-next:hover, .testimonial .swiper-button-prev:hover{
     color:#fff;
     background:#ce7141;
 }
