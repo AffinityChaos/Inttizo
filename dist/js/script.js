@@ -12,3 +12,25 @@ document.addEventListener('scroll', ()=>{
         header.classList.add('absolute');
     }
 })
+
+document.addEventListener('DOMContentLoaded',()=>{
+    const popupContainer = document.getElementById('popupContainer');
+    const closeBtn  = document.getElementById('closeBtn');
+    const openBtn = document.getElementById('openBtn');
+    setTimeout(()=>{
+        popupContainer.classList.remove('hidden');
+        setTimeout(()=>{
+            popupContainer.addEventListener('click',()=>{
+                popupContainer.classList.add('hidden');
+            })
+        },2000)
+    }, 3000)
+
+    closeBtn.addEventListener('click',()=>{
+        popupContainer.classList.add('hidden');
+    })
+    openBtn.addEventListener('click',()=>{
+        popupContainer.classList.remove('hidden');
+    })
+    
+})
